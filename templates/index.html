@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Video Player</title>
+</head>
+<body style="text-align: center; font-family: Arial;">
+    <h2>YouTube Video Player</h2>
+    <form method="POST">
+        <input type="text" name="yt_link" placeholder="Enter YouTube URL" style="width: 300px;" required>
+        <button type="submit">Play</button>
+    </form>
+    <br>                                                                    
+    {% if video_url %}
+        <iframe width="560" height="315"
+                src="{{ video_url }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    {% endif %}
+</body>
+</html>
